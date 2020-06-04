@@ -41,7 +41,7 @@ class Dog
 
   def self.create(hash)
     dog = Dog.new(hash)
-    hash.each {|key, value| dogs.save(("#{key}="), value)}
+    hash.each {|key, value| dogs.send(("#{key}="), value)}
     dog.save
     dog
   end
