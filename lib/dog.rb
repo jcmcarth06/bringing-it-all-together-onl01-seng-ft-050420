@@ -43,6 +43,7 @@ class Dog
     dog = Dog.new(hash)
     hash.each {|key, value| dog.send(("#{key}="), value)}
     dog.save
+    dog
   end
 
 
