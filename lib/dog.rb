@@ -35,6 +35,7 @@ class Dog
 
     DB[:conn].execute(sql, self.name, self.breed)
     @id = DB[:conn].execute(SELECT )
+    end
   end
 
   def self.create(name, breed)
