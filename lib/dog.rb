@@ -44,4 +44,5 @@ class Dog
     dog.save
     dog
   end
+  self
 end
