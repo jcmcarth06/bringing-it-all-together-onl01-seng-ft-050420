@@ -39,10 +39,11 @@ class Dog
     self
   end
 
-  def self.create(name, breed)
-    dog = Dog.new(name, breed)
+  def self.create(hash)
+    dog = Dog.each {|key, value| self.send(("#{key}="), value)}
     dog.save
     dog
   end
-  self
+
+  
 end
